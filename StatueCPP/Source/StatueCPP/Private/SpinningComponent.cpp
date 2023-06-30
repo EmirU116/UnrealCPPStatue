@@ -20,7 +20,7 @@ void USpinningComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 
 	// variable for getting the owner of the component
 	auto owner = GetOwner();
-
+ 
 	// setting up how the actor should rotate
 	auto rotation = FRotator(0, SpinningSpeed * DeltaTime, 0);
 
