@@ -11,17 +11,5 @@ AStatueActor::AStatueActor()
 
 }
 
-// Called when the game starts or when spawned
-void AStatueActor::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
 
-// Called every frame
-void AStatueActor::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
 

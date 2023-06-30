@@ -16,11 +16,19 @@ public:
 	// Sets default values for this component's properties
 	URandomMoveComponent();
 
-protected:
-	// Called when the game starts
-	virtual void BeginPlay() override;
+private:
+	float Timer;
 
+	UFUNCTION()
+		void RandomMove();
 public:	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+		float Radius = 100.f;
+
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+		float Interval = 30.f;
+
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
