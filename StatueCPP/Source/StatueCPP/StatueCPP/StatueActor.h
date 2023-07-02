@@ -3,24 +3,19 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MyPickUpInterface.h"
 #include "GameFramework/Actor.h"
 #include "StatueActor.generated.h"
 
 UCLASS()
-class STATUECPP_API AStatueActor : public AActor
+class STATUECPP_API AStatueActor : public AActor, public IMyPickUpInterface
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AStatueActor();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+		void Pickup(); virtual void Pickup_Implementation() override;
 };

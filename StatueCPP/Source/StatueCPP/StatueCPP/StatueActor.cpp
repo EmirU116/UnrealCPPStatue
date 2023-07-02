@@ -11,5 +11,11 @@ AStatueActor::AStatueActor()
 
 }
 
+void AStatueActor::Pickup_Implementation()
+{
+	// This is basically Print String in blueprint
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red,FString("OHOHO, Interaction i see"));
+}
+
 
 

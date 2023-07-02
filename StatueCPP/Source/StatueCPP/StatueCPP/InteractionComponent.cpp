@@ -12,23 +12,21 @@ UInteractionComponent::UInteractionComponent()
 
 	// ...
 }
-
-
-// Called when the game starts
-void UInteractionComponent::BeginPlay()
-{
-	Super::BeginPlay();
-
-	// ...
-	
-}
-
-
 // Called every frame
 void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
+	const AActor* Owner = GetOwner();
+
+	TArray<FOverlapResult> CandidateActors;
+
+	// Find nearby actors
+	//GetWorld()->OverlapMultiByChannel(CandidateActors,
+	//	Owner->GetActorLocation(),
+	//	FQuat::Identity,);
+	// Loop throught found actors
+
+	// Call the interface on all collected actors
 }
 
