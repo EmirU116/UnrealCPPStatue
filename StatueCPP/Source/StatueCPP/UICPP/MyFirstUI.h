@@ -5,12 +5,3 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 
-/**
- * 
- */
-UCLASS(Abstract)
-class STATUECPP_API MyFirstUI : public UUserWidget
-{
-public:
-	
-};

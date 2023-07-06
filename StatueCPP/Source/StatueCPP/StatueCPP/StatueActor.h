@@ -17,5 +17,5 @@ public:
 	AStatueActor();
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-		void Pickup(); virtual void Pickup_Implementation() override;
+		void Pickup(); virtual void Pickup_Implementation();
 };
