@@ -3,3 +3,7 @@
 
 #include "ScoreSubsystem.h"
 
+void UScoreSubsystem::AddScore()
+{
+	CurrentScore++;	//increment
+}

@@ -10,15 +10,6 @@ UCLASS(minimalapi)
 class AStatueCPPGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
-private:
-	int32 CurrentScore;
-public:
-	AStatueCPPGameMode();
-
-	UFUNCTION()
-	void AddScore();
-
-	int32 GetScore() { return CurrentScore; }
 };
 
 
