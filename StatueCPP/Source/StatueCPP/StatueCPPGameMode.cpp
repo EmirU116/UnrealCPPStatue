@@ -13,3 +13,8 @@ AStatueCPPGameMode::AStatueCPPGameMode()
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 }
+
+void AStatueCPPGameMode::AddScore()
+{
+	CurrentScore++;			// incrementing
+}
