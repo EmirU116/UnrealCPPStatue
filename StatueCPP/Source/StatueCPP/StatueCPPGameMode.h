@@ -10,6 +10,8 @@ UCLASS(minimalapi)
 class AStatueCPPGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
+
+	AStatueCPPGameMode();
 };
 
 

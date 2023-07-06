@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Subsystems/WorldSubsystem.h"
-#include "../StatueCPPGameMode.h"
 #include "ScoreSubsystem.generated.h"
 
 /**
@@ -18,7 +17,8 @@ class STATUECPP_API UScoreSubsystem : public UWorldSubsystem
 private:
 	int32 CurrentScore;
 public:
-	UScoreSubsystem();
+
+	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 
 	UFUNCTION()
 	void AddScore();
