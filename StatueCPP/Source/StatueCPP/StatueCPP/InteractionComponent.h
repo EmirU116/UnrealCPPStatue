@@ -12,9 +12,14 @@ class STATUECPP_API UInteractionComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+private:
+	FCollisionShape TraceSphere;
 public:	
 	// Sets default values for this component's properties
 	UInteractionComponent();
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere)
+	float Radius;
 
 public:	
 	// Called every frame
