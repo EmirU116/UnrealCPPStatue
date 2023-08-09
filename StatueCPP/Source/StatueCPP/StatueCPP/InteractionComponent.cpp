@@ -2,7 +2,6 @@
 
 
 #include "InteractionComponent.h"
-
 #include "MyPickUpInterface.h"
 
 // Sets default values for this component's properties
@@ -42,6 +41,7 @@ void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 		if (ActorReference -> Implements<UMyPickUpInterface>())
 		{
 			IMyPickUpInterface::Execute_PickUp(ActorReference);
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Emerald, TEXT("INTERACTION"));
 		}
 	}
 }

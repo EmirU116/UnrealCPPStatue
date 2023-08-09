@@ -6,12 +6,15 @@
 #include "GameFramework/GameModeBase.h"
 #include "StatueCPPGameMode.generated.h"
 
-UCLASS(minimalapi)
+UCLASS()
 class AStatueCPPGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 	AStatueCPPGameMode();
+
+protected:
+	virtual void BeginPlay() override;
 };
 
 
