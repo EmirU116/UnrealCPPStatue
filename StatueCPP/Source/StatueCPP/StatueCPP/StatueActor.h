@@ -18,7 +18,7 @@ private:
 	AStatueCPPGameMode* GameMode;
 
 protected:
-	virtual void BeginPlay() override;
+
 public:
 	// Sets default values for this actor's properties
 	AStatueActor();

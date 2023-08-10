@@ -40,7 +40,7 @@ void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 
 		if (ActorReference -> Implements<UMyPickUpInterface>())
 		{
-			IMyPickUpInterface::Execute_PickUp(ActorReference);
+			IMyPickUpInterface::Execute_PickedUp(ActorReference);
 			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Emerald, TEXT("INTERACTION"));
 		}
 	}

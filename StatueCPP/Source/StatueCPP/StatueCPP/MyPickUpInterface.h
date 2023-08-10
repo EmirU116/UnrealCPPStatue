@@ -20,5 +20,5 @@ class STATUECPP_API IMyPickUpInterface
 
 public:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Prop")
-		void PickUp();
+		void PickedUp();
 };

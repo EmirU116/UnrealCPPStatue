@@ -27,7 +27,7 @@ void AMyPawn::Move(FVector2D AxisInput)
 
 	SetActorLocation(
 		GetActorLocation()
-		+ MoveVector
+		+ MoveVector * DeltaTime
 		);
 	
 }

@@ -13,9 +13,10 @@ class STATUECPP_API AMyPawn : public APawn
 {
 	GENERATED_BODY()
 
-
+/*
 	UPROPERTY()
 		UBoxComponent* boxCollision = CreateDefaultSubobject<UBoxComponent>(FName("Collision Mesh"));
+*/
 
 public:
 	// Sets default values for this pawn's properties
@@ -25,5 +26,5 @@ public:
 	void Move(FVector2D AxisInput);
 	 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	float moveSpeed = 10.f;
+	float moveSpeed = 350.f;
 };
