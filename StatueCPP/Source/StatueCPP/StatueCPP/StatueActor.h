@@ -9,20 +9,21 @@
 #include "StatueActor.generated.h"
 
 UCLASS()
-class STATUECPP_API AStatueActor : public AActor,
-	public IMyPickUpInterface
+class STATUECPP_API AStatueActor : public AActor
 {
 	GENERATED_BODY()
-
-private:
-	AStatueCPPGameMode* GameMode;
-
-protected:
-
 public:
 	// Sets default values for this actor's properties
 	AStatueActor();
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void Pickup(); virtual void Pickup_Implementation();
+	void Interact(); virtual void Interact_Implementation();
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+private:
+	AStatueCPPGameMode* GameMode;
+
+
 };

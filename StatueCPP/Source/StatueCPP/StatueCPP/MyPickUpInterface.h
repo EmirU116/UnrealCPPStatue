@@ -19,6 +19,6 @@ class STATUECPP_API IMyPickUpInterface
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Prop")
-		void PickedUp();
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	void Interact();
 };

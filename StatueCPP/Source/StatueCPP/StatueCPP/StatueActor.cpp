@@ -10,10 +10,16 @@ AStatueActor::AStatueActor()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-void AStatueActor::Pickup_Implementation()
+void AStatueActor::Interact_Implementation()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red,FString("Interaction"));
+	GEngine->AddOnScreenDebugMessage(-1, 5, FColor::Blue, TEXT("It Interacted"));
 }
+
+void AStatueActor::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
 
 
 

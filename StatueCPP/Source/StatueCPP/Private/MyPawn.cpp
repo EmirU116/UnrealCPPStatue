@@ -14,21 +14,18 @@ AMyPawn::AMyPawn()
 
 void AMyPawn::Move(FVector2D AxisInput)
 {
-	// storing vector 2 (x, y) into a vector 3
-	auto MoveVector = FVector(AxisInput.X,AxisInput.Y, 0.f);
-	
+	auto MoveVector = FVector(AxisInput.X, AxisInput.Y, 0.f);
+
 	auto TransformedVector = UKismetMathLibrary::TransformDirection(
 		GetActorTransform(),
 		MoveVector);
 
-	auto DeltaTime = GetWorld()-> GetDeltaSeconds();
-
+	auto deltaTime = GetWorld() -> GetDeltaSeconds();
+	
 	MoveVector *= moveSpeed;
 
 	SetActorLocation(
 		GetActorLocation()
-		+ MoveVector * DeltaTime
-		);
-	
+		+ MoveVector * deltaTime);
 }
 

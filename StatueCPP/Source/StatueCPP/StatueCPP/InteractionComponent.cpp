@@ -32,7 +32,7 @@ void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 		TraceSphere
 		);
 	
-	// Loop throught found actors
+	// Loop through found actors
 	for (int i = 0; i<CandidateActors.Num(); i++)
 	{
 		// Call the interface on all collected actors
@@ -40,7 +40,7 @@ void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 
 		if (ActorReference -> Implements<UMyPickUpInterface>())
 		{
-			IMyPickUpInterface::Execute_PickedUp(ActorReference);
+			IMyPickUpInterface::Execute_Interact(ActorReference);
 			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Emerald, TEXT("INTERACTION"));
 		}
 	}
